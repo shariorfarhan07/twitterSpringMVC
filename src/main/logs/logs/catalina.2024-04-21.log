@@ -1,0 +1,76 @@
+21-Apr-2024 03:15:20.667 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+21-Apr-2024 03:15:20.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+21-Apr-2024 03:15:20.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+21-Apr-2024 03:15:20.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+21-Apr-2024 03:15:20.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-28-generic
+21-Apr-2024 03:15:20.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Apr-2024 03:15:20.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /home/shariorh/.jdks/corretto-17.0.10
+21-Apr-2024 03:15:20.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.10+8-LTS
+21-Apr-2024 03:15:20.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Amazon.com Inc.
+21-Apr-2024 03:15:20.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs
+21-Apr-2024 03:15:20.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/tomcat
+21-Apr-2024 03:15:20.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Apr-2024 03:15:20.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Apr-2024 03:15:20.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Apr-2024 03:15:20.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Apr-2024 03:15:20.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Apr-2024 03:15:20.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/tomcat
+21-Apr-2024 03:15:20.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs
+21-Apr-2024 03:15:20.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/temp
+21-Apr-2024 03:15:20.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/conf/logging.properties
+21-Apr-2024 03:15:20.693 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Apr-2024 03:15:20.693 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:/home/shariorh/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/lib/idea_rt.jar=38563:/home/shariorh/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/bin
+21-Apr-2024 03:15:20.693 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Apr-2024 03:15:20.697 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+21-Apr-2024 03:15:21.454 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:15:21.494 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1195] milliseconds
+21-Apr-2024 03:15:21.596 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Apr-2024 03:15:21.597 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+21-Apr-2024 03:15:21.614 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/conf/Catalina/localhost/ROOT.xml]
+21-Apr-2024 03:15:21.922 WARNING [main] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [5.0]. Default version will be used.
+21-Apr-2024 03:15:23.232 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Apr-2024 03:15:23.304 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/conf/Catalina/localhost/ROOT.xml] has finished in [1,689] ms
+21-Apr-2024 03:15:23.310 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:15:23.328 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1833] milliseconds
+21-Apr-2024 03:23:54.521 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:23:54.524 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Apr-2024 03:23:54.539 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:23:54.547 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:24:02.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+21-Apr-2024 03:24:02.934 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+21-Apr-2024 03:24:02.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+21-Apr-2024 03:24:02.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+21-Apr-2024 03:24:02.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-28-generic
+21-Apr-2024 03:24:02.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Apr-2024 03:24:02.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /home/shariorh/.jdks/corretto-17.0.10
+21-Apr-2024 03:24:02.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.10+8-LTS
+21-Apr-2024 03:24:02.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Amazon.com Inc.
+21-Apr-2024 03:24:02.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs
+21-Apr-2024 03:24:02.937 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/tomcat
+21-Apr-2024 03:24:02.951 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Apr-2024 03:24:02.951 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Apr-2024 03:24:02.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Apr-2024 03:24:02.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Apr-2024 03:24:02.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Apr-2024 03:24:02.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/tomcat
+21-Apr-2024 03:24:02.952 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs
+21-Apr-2024 03:24:02.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/temp
+21-Apr-2024 03:24:02.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/conf/logging.properties
+21-Apr-2024 03:24:02.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Apr-2024 03:24:02.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:/home/shariorh/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/lib/idea_rt.jar=34261:/home/shariorh/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/bin
+21-Apr-2024 03:24:02.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+21-Apr-2024 03:24:02.956 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+21-Apr-2024 03:24:03.480 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:24:03.514 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [896] milliseconds
+21-Apr-2024 03:24:03.583 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Apr-2024 03:24:03.583 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+21-Apr-2024 03:24:03.596 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/conf/Catalina/localhost/ROOT.xml]
+21-Apr-2024 03:24:03.819 WARNING [main] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [5.0]. Default version will be used.
+21-Apr-2024 03:24:05.116 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Apr-2024 03:24:05.174 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/shariorh/eclipse-workspace/twitterSpringMVC/src/main/logs/conf/Catalina/localhost/ROOT.xml] has finished in [1,577] ms
+21-Apr-2024 03:24:05.179 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:24:05.191 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1676] milliseconds
+21-Apr-2024 03:24:13.785 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:24:13.787 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Apr-2024 03:24:13.805 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Apr-2024 03:24:13.812 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
