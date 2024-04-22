@@ -1,13 +1,15 @@
 package com.twitter.dao;
 
+import com.twitter.dto.UserDto;
 import com.twitter.entity.User;
+import com.twitter.mapper.userMapper;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.extern.java.Log;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
-@Data
+@Log
 @AllArgsConstructor
 public class FollowerMappingDao {
     private final String insertFollower="INSERT INTO followers_mapping(user, follower) VALUES (?,?)";
@@ -16,20 +18,19 @@ public class FollowerMappingDao {
 
     private final JdbcTemplate jdbcTemplate;
 
-//    CheckFollowes(int userId){return;}
-    public List<User> CheckFollowers(int userId){
-
-        return null;
+    public List<User> getFollowers(int userId){
+        return jdbcTemplate.query(seeFollower, new userMapper(), userId);
     }
-//    removeFollower(int userId ,int follower)
-//    boolean insertFollower(int userId ,int follower)
+
+    public void follow(int userid, int userTofollow) {
+        log.info(insertFollower+" "+userid+" "+userTofollow);
+        jdbcTemplate.update(insertFollower,userid,userTofollow);
+    }
 
 
-
-
-
-
-
-
+    public void remove(int userid, int userToUnfollow) {
+        log.info(insertFollower+" "+userid+" "+userToUnfollow);
+        jdbcTemplate.update(deleteFollower,userid,userToUnfollow);
+    }
 
 }

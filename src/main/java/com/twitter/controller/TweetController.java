@@ -2,54 +2,63 @@ package com.twitter.controller;
 
 import com.twitter.dto.TweetDto;
 import com.twitter.dto.UserDto;
+import com.twitter.entity.Tweet;
+import com.twitter.entity.User;
+import com.twitter.service.FollowerService;
+import com.twitter.service.TweetService;
+import jakarta.servlet.http.HttpSession;
+import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Controller
 @Log
-//@RequestMapping(value = "/tweet")
+@RequestMapping(value = "/tweet")
+@AllArgsConstructor
 public class TweetController {
 //    private Logger Log = Logger.getLogger(String.valueOf(TweetController.class));
+    private final TweetService tweetService;
+    private final FollowerService followerService;
 
-//    @RequestMapping(value = "/test", method = RequestMethod.GET)
-//    public String printHelloWorld(ModelMap modelMap){
-//        log.info("test");
-//        // add attribute to load modelMap
-//        modelMap.addAttribute("message",
-//                "Hello World and Welcome to Spring MVC!");
-//        // return the name of the file to be loaded "hello_world.jsp"
-//        return "hello_world";
-//    }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String home(ModelMap modelMap){
-        List<TweetDto> tweets = null;
-        List<UserDto>  followers=null;
-        List<UserDto>  userTofollow=null;
-//        try {
-//            tweets = tweetDao.SearchFriendsAndMyTweet(userid);
-//            followers= userDao.getFollowers(userid);
-//            userTofollow= userDao.getUserToFollow(userid);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public String home(ModelMap modelMap, Model model, HttpSession session){
+        log.info("tweet home page");
+        List<Tweet> tweets = null;
+        List<User> followers=null;
+        List<User> userTofollow=null;
+
+        String username =(String) session.getAttribute("username");
+        if (username == null) {
+            model.addAttribute("error","You are not logged in, please login!");
+            return "login";
+        }
+        int userid= (int) session.getAttribute("id");
+        log.info("user id from tweet = "+userid);
+        tweets = tweetService.SearchFriendsAndMyTweet(userid);
+        followers= followerService.getFollowers(userid);
+        userTofollow= followerService.getUserToFollow(userid);
+        System.out.println(tweets.toString()+"farhan");
+        System.out.println(followers.toString());
+        System.out.println(userTofollow.toString());
         // add attribute to load modelMap
         modelMap.addAttribute("tweets",tweets);
         modelMap.addAttribute("followers",followers);
-        modelMap.addAttribute("userTofollow",userTofollow);
-        // return the name of the file to be loaded "hello_world.jsp"
+        modelMap.addAttribute("usersTofollow",userTofollow);
         return "home";
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.GET)
-    public String update(ModelMap modelMap){
-        TweetDto tweet = null;
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+    public String update(ModelMap modelMap,@ModelAttribute("id") int id){
+        Tweet tweet = tweetService.searchTweetById(id);
         modelMap.addAttribute("tweet",tweet);
         return "update";
     }

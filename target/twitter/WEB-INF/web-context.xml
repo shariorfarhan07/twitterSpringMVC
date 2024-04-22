@@ -24,9 +24,27 @@
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/tweeter" />
-        <property name="username" value="root"/>
-        <property name="password" value="root"/>
+        <property name="username" value="root1"/>
+        <property name="password" value="root1"/>
      </bean>
+
+    <bean id="AuthenticationService" class="com.twitter.service.AuthenticationService">
+<!--        <constructor-arg ref=""/>-->
+    </bean>
+    <bean id="UserDao" class="com.twitter.dao.UserDao">
+<!--        <constructor-arg ref=""/>-->
+    </bean>
+    <bean id="FollowerService" class="com.twitter.service.FollowerService">
+<!--        <constructor-arg ref=""/>-->
+    </bean>
+    <bean id="FollowerMappingDao" class="com.twitter.dao.FollowerMappingDao">
+<!--        <constructor-arg ref=""/>-->
+    </bean>
+
+    <bean id="TweetService" class="com.twitter.service.TweetService">
+    </bean>
+    <bean id="TweetDao" class="com.twitter.dao.TweetDao">
+    </bean>
 
 
 

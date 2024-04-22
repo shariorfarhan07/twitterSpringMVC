@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Tweet {
     int id;
-    int username;
+    String username;
     String text;
 }

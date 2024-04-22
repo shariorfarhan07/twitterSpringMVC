@@ -23,21 +23,20 @@ public class TweetDao {
     private  final String search_single_tweet="SELECT id, username, text FROM tweet WHERE id = ?";
     private  final String search_friends_tweet="SELECT t.id as id , u.username as username , t.text as text  FROM tweet t join user u on t.username = u.id  WHERE t.username in (SELECT follower FROM followers_mapping WHERE user = ?)";
     private final JdbcTemplate jdbcTemplate;
-//      public  List<TweetDto> SearchUserTweet(int userId)
     private   List<Tweet> Search(String sql,int userId){
         log.info(sql+" "+userId);
         List<Tweet> tweets = jdbcTemplate.query(sql, new tweetMapper(), userId);
-        log.info(tweets.toString());
+        if (tweets!=null)log.info(tweets.toString());
         return tweets;
     }
     public  List<Tweet> SearchUserTweet(int userId){
         return Search(search_user_tweet, userId);
     }
-    public  List<Tweet> searchSingleStweet(int tweetId) throws SQLException {
-        return Search(search_single_tweet,tweetId);
-    }
+//    public  List<Tweet> searchSingleStweet(int tweetId) throws SQLException {
+//        return Search(search_single_tweet,tweetId);
+//    }
     public  List<Tweet> SearchFriendsAndMyTweet(int userId) throws SQLException {
-        return Search(search_friends_tweet+"or t.username="+userId+" order by id DESC",userId);
+        return Search(search_friends_tweet+" or t.username="+userId+" order by id DESC",userId);
     }
     public boolean create(int userId ,String tweet){
         log.info(create_tweet+" UserID: "+userId+" tweet"+tweet);
@@ -63,4 +62,7 @@ public class TweetDao {
         update(tweetUpdate.getId(), Integer.parseInt(tweetUpdate.getUsername()),tweetUpdate.getText());
     }
 
+    public Tweet searchById(int tweetId) {
+        return (Tweet) Search(search_single_tweet,tweetId);
+    }
 }

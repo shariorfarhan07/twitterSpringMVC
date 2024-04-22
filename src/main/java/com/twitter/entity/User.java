@@ -6,9 +6,12 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class User {
-    int id;
-    String username;
-    String password;
-    String email;
+    private int id;
+    private String username;
+    private  String password;
+    private String email;
 
+    public boolean validPayload() {
+        return !(username==null||password==null||email==null||username.equals("")||password.equals("")||email.equals(""));
+    }
 }

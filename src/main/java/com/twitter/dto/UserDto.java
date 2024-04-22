@@ -1,7 +1,6 @@
 package com.twitter.dto;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 public class UserDto {

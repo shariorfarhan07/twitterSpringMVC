@@ -13,8 +13,8 @@ public class tweetMapper  implements RowMapper<Tweet> {
     @Override
     public Tweet mapRow(ResultSet rs, int rowNum) throws SQLException {
         int id=rs.getInt("id");
-        int username=rs.getInt("username");
-        String text=rs.getString("");
+        String username=rs.getString("username");
+        String text=rs.getString("text");
         return new Tweet(id,username,text);
     }
 }
